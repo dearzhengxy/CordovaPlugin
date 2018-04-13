@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-toast" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-toast</name>
+    <js-module name="toastPlugin" src="www/toastPlugin.js">
+        <clobbers target="cordova.plugins.toastPlugin" />
+    </js-module>
+    
+    <platform name="android">  
+        <source-file src="src/android/ShowToast.java" target-dir="src/com/hand/toast"/>  
+  
+        <config-file target="res/xml/config.xml" parent="/*">  
+            <feature name="ShowToast">  
+                <param name="android-package" value="com.hand.toast.ShowToast"/>  
+            </feature>  
+        </config-file>  
+    </platform>  
+
+</plugin>
+
+
+
